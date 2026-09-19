@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter For You 💌</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffd6e7, #fff0f6);
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: 30px 22px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  animation: fadeIn 1s ease;
+}
+
+.envelope {
+  font-size: 75px;
+  animation: float 2s infinite ease-in-out;
+}
+
+h1 {
+  color: #e75480;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+}
+
+button {
+  border: none;
+  padding: 13px 25px;
+  border-radius: 30px;
+  background: #e75480;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.letter {
+  display: none;
+  text-align: left;
+}
+
+.letter h2 {
+  text-align: center;
+  color: #e75480;
+}
+
+.heart {
+  text-align: center;
+  font-size: 40px;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- FIRST PAGE -->
+  <div class="card" id="firstPage">
+    <div class="envelope">💌</div>
+
+    <h1>You Have Received a Letter!</h1>
+
+    <p>
+      Someone prepared a special message just for you.
+    </p>
+
+    <button onclick="openLetter()">
+      Open Letter 💖
+    </button>
+  </div>
+
+  <!-- LETTER PAGE -->
+  <div class="card letter" id="letterPage">
+
+    <div class="heart">💖</div>
+
+    <h2>Thank You, RUFO JR NATOR!</h2>
+
+    <p>
+      Dear RUFO JR NATOR,
+    </p>
+
+    <p>
+      I just want to say thank you for everything.
+      Your kindness, time, and presence are truly appreciated.
+    </p>
+
+    <p>
+      Thank you for the memories, the smiles, and for being
+      someone worth appreciating. I hope you always remember
+      that your efforts and kindness matter.
+    </p>
+
+    <p>
+      This simple letter is just a little way of saying
+      how grateful I am.
+    </p>
+
+    <p>
+      <b>Thank you so much, RUFO JR NATOR! 💖</b>
+    </p>
+
+    <p style="text-align:center;">
+      With gratitude,<br>
+      <b>JUESS KARL JOSE T. NATOR</b>
+    </p>
+
+  </div>
+
+</div>
+
+<script>
+function openLetter() {
+  document.getElementById("firstPage").style.display = "none";
+  document.getElementById("letterPage").style.display = "block";
+}
+</script>
+
+</body>
+</html>
